@@ -4,16 +4,6 @@
     background-size: cover;
 }
 
-.navbar__list__item{
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 1s ease;
-}
-
-
-.navbar__list__item:hover {
-    border-bottom: 2px solid white;
-}
-
 .header {
     position: absolute;
     top: 50%;
