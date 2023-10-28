@@ -3,12 +3,18 @@
 import LeftMenu from "../components/LeftMenu";
 import React, { useState } from "react";
 import Button from "../components/Button";
+import AddAppointmentModal from "../components/AddAppointmentModal";
 
 function page() {
   const [isHidden, setIsHidden] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   function handleClick() {
     setIsHidden(!isHidden);
+  }
+
+  function addAppointmentHandleClick(){
+    setIsModalOpen(!isModalOpen);
   }
 
   return (
@@ -19,7 +25,7 @@ function page() {
         <div className="actions flex justify-end">
         <button
   class="middle none center rounded-lg bg-blue-500 mt-5 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-auto"
-  data-ripple-light="true">Make an appointment</button>
+  data-ripple-light="true" onClick={addAppointmentHandleClick}>Make an appointment</button>
         </div>
         <div className="upcoming-appointments">
           <div class="container mx-auto px-4 sm:px-8">
@@ -267,6 +273,7 @@ function page() {
           </div>
         </div>
       </div>
+      <AddAppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
     
   );
