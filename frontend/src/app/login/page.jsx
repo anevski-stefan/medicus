@@ -29,7 +29,7 @@ function page() {
                                         <button type="submit" class="w-full rounded-md bg-black px-3 py-4 text-white focus:bg-gray-600 focus:outline-none">Sign in</button>
                                     </div>
                                     <p class="text-center text-sm text-gray-500">Don&#x27;t have an account yet?
-                                        <a href="#!" class="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none">Sign up
+                                        <a href="#!" class="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none"> Sign up
                                         </a>.
                                     </p>
                                 </form>
