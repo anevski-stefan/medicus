@@ -1,0 +1,12 @@
+.times li {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 0;
+}
+
+.close-btn {
+    top: 2%;
+    left: 3%;
+    font-size: 1.5rem;
+}
