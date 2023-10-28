@@ -1,0 +1,30 @@
+.bg {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar__list__item{
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 1s ease;
+}
+
+
+.navbar__list__item:hover {
+    border-bottom: 2px solid white;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fadeIn 5s;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
