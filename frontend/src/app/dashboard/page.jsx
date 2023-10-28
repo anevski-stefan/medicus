@@ -15,10 +15,15 @@ function page() {
     <div className="dashboard-wrapper flex">
       <LeftMenu className={isHidden ? "hidden animated" : "visible animated"} />
       <Button isHidden={isHidden} handleClick={handleClick} />
-      <div className="apointments-content w-full">
+      <div className="apointments-content w-9/12">
+        <div className="actions flex justify-end">
+        <button
+  class="middle none center rounded-lg bg-blue-500 mt-5 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-auto"
+  data-ripple-light="true">Make an appointment</button>
+        </div>
         <div className="upcoming-appointments">
           <div class="container mx-auto px-4 sm:px-8">
-            <div class="py-8">
+            <div>
               <div>
                 <h2 class="text-2xl font-semibold leading-tight">
                   Upcoming Appointments
@@ -142,7 +147,7 @@ function page() {
             <div class="py-8">
               <div>
                 <h2 class="text-2xl font-semibold leading-tight">
-                  Upcoming Appointments
+                  Past Appointments
                 </h2>
               </div>
               <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -263,6 +268,7 @@ function page() {
         </div>
       </div>
     </div>
+    
   );
 }
 
