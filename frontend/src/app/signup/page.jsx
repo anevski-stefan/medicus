@@ -39,6 +39,16 @@ function page() {
                                         <option value="CA">Doctor</option>
                                     </select>
                                     </div>
+                                    <div class="relative mt-6">
+                                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Specialization</label>
+                                        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option value="US">Specialization1</option>
+                                        <option value="CA">Specialization2</option>
+                                        <option value="CA">Specialization3</option>
+                                        <option value="CA">Specialization4</option>
+                                    </select>
+                                    </div>
+                                    
                                     
                                     <div class="relative mt-6">
                                         <input type="password" name="password" id="password" placeholder="Password" class="peer peer mt-1 w-full border-b-2 border-gray-300 px-0 py-1 placeholder:text-transparent focus:border-gray-500 focus:outline-none" />
