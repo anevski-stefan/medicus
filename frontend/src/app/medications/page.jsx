@@ -3,9 +3,9 @@
 import LeftMenu from "../components/LeftMenu";
 import React, { useState } from "react";
 import Button from "../components/Button";
-import AddAppointmentModal from "../components/AddAppointmentModal";
+import MedicationsModal from "../components/MedicationsModal";
 
-function page() {
+function Page() {
   const [isHidden, setIsHidden] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -13,10 +13,9 @@ function page() {
     setIsHidden(!isHidden);
   }
 
-  function addTreatmentHandleClick() {
+  function addAppointmentHandleClick() {
     setIsModalOpen(!isModalOpen);
   }
-
   return (
     <div className="dashboard-wrapper flex">
       <LeftMenu className={isHidden ? "hidden animated" : "visible animated"} />
@@ -26,7 +25,7 @@ function page() {
           <button
             class="middle none center rounded-lg bg-blue-500 mt-5 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-auto"
             data-ripple-light="true"
-            onClick={addTreatmentHandleClick}
+            onClick={addAppointmentHandleClick}
           >
             Add treatment
           </button>
@@ -77,18 +76,18 @@ function page() {
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                           <p class="text-gray-900 whitespace-no-wrap">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sint quos iure delectus, reiciendis harum
-                            excepturi neque. Et deserunt provident at!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Nostrum quod iste ad doloribus odio
+                            voluptatibus non aut corporis soluta. Magni?
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            15:00
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            15:30
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
                             Yes
                           </p>
                         </td>
@@ -108,18 +107,18 @@ function page() {
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sint quos iure delectus, reiciendis harum
-                            excepturi neque. Et deserunt provident at!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Nostrum quod iste ad doloribus odio
+                            voluptatibus non aut corporis soluta. Magni?
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            15:00
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            15:30
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
                             Yes
                           </p>
                         </td>
@@ -139,18 +138,18 @@ function page() {
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sint quos iure delectus, reiciendis harum
-                            excepturi neque. Et deserunt provident at!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Nostrum quod iste ad doloribus odio
+                            voluptatibus non aut corporis soluta. Magni?
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            15:00
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            15:30
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
                             Yes
                           </p>
                         </td>
@@ -170,18 +169,18 @@ function page() {
                         </td>
                         <td class="px-5 py-5 bg-white text-sm">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Sint quos iure delectus, reiciendis harum
-                            excepturi neque. Et deserunt provident at!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Nostrum quod iste ad doloribus odio
+                            voluptatibus non aut corporis soluta. Magni?
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
-                            15:00
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            15:30
                           </p>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                          <p class="text-gray-900 whitespace-no-wrap">
+                        <td class="px-5 py-5 bg-white text-sm">
+                        <p class="text-gray-900 whitespace-no-wrap">
                             Yes
                           </p>
                         </td>
@@ -207,7 +206,7 @@ function page() {
           </div>
         </div>
       </div>
-      <AddAppointmentModal
+      <MedicationsModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
@@ -215,4 +214,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
