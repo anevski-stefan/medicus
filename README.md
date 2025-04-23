@@ -16,14 +16,19 @@ Medicus is a healthcare management application that provides a platform for pati
 ### Frontend
 - Next.js 14.0.0
 - React 18
-- TailwindCSS
-- CSS3 for custom animations
+- TailwindCSS 3
+- PostCSS 8
+- Autoprefixer 10
 
 ### Backend
 - Spring Boot 3.1.5
 - Java 17
 - PostgreSQL
+- H2 Database (for development)
+- Spring Security
+- Lombok
 - Maven
+- Thymeleaf
 
 ## Prerequisites
 
@@ -68,68 +73,83 @@ cd backend
 ```
 
 2. Configure your database:
-   - Create a PostgreSQL database named `medicus`
-   - Update the database credentials in `application-prod.properties` if needed
+   - Create a PostgreSQL database
+   - Update the database credentials in `application.properties` if needed
 
 3. Run the Spring Boot application:
 ```bash
 ./mvnw spring-boot:run
 ```
 
-The backend API will be available at `http://localhost:9091`
+The backend API will be available at `http://localhost:8080` (default Spring Boot port)
 
 ## Project Structure
 
 ### Frontend
-- `/src/app` - Next.js pages and components
-- `/public/styles` - CSS stylesheets
-- `/components` - Reusable React components
+```
+frontend/
+├── src/
+├── public/
+├── package.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+└── jsconfig.json
+```
 
 ### Backend
-- `/src/main/java/com/example/backend/controller` - REST Controllers
-- `/src/main/java/com/example/backend/model` - Entity Models
-- `/src/main/java/com/example/backend/service` - Business Logic
-- `/src/main/java/com/example/backend/repository` - Data Access Layer
-- `/src/main/resources` - Configuration files
-- `/src/test` - Test files
+```
+backend/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   └── resources/
+│   └── test/
+├── pom.xml
+└── mvnw
+```
 
 ## Environment Variables
 
 ### Frontend
 Create a `.env.local` file in the frontend directory:
 ```env
-# Add your environment variables here
+NEXT_PUBLIC_API_URL=http://localhost:8080
 ```
 
 ### Backend
-Configure `application-prod.properties`:
+Configure `application.properties`:
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/medicus
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 ```
 
-## API Endpoints
-
-### Patient Endpoints
-- GET /api/patients - Get all patients
-
-### Doctor Endpoints
-- GET /api/doctors - Get all doctors
-
-### Appointment Endpoints
-- Various endpoints for appointment management
-
-## Production Deployment
+## Development
 
 ### Frontend
 ```bash
-cd frontend
-npm run build
+npm run dev     # Start development server
+npm run build   # Build for production
+npm run start   # Start production server
+npm run lint    # Run linter
 ```
 
 ### Backend
 ```bash
-cd backend
-./mvnw clean package
+./mvnw spring-boot:run      # Run development server
+./mvnw clean package        # Build for production
+./mvnw test                 # Run tests
 ```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
