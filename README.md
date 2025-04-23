@@ -83,32 +83,6 @@ cd backend
 
 The backend API will be available at `http://localhost:8080` (default Spring Boot port)
 
-## Project Structure
-
-### Frontend
-```
-frontend/
-├── src/
-├── public/
-├── package.json
-├── next.config.js
-├── tailwind.config.js
-├── postcss.config.js
-└── jsconfig.json
-```
-
-### Backend
-```
-backend/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-├── pom.xml
-└── mvnw
-```
-
 ## Environment Variables
 
 ### Frontend
@@ -152,4 +126,4 @@ npm run lint    # Run linter
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
